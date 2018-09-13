@@ -33,7 +33,7 @@
             <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
                 <div class="mdl-layout__header-row">
                     <span class="android-title mdl-layout-title">
-                        <img class="android-logo-image" src="/imagenes/android-logo.png"> <!--Cambiar por el logo de la aplicacion-->
+                        <img class="android-logo-image" src="<c:url value = "/imagenes/android-logo.png"/>"> <!--Cambiar por el logo de la aplicacion-->
                     </span>
                     <!-- Add spacer, to align navigation to the right in desktop -->
                     <div class="android-header-spacer mdl-layout-spacer"></div>
@@ -55,7 +55,7 @@
                         </nav>
                     </div>
                     <span class="android-mobile-title mdl-layout-title">
-                        <img class="android-logo-image" src="/imagenes/android-logo.png">
+                        <img class="android-logo-image" src="<c:url value = "/imagenes/android-logo.png"/>">
                     </span>
                     <button class="android-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="more-button">
                         <i class="material-icons">more_vert</i>
@@ -72,7 +72,7 @@
 
             <div class="android-drawer mdl-layout__drawer">
                 <span class="mdl-layout-title">
-                    <img class="android-logo-image" src="../imagenes/android-logo-white.png"> <!--Cambiar por el logo de la aplicacion-->
+                    <img class="android-logo-image" src=" <c:url value = "/imagenes/android-logo-white.png"/>"> <!--Cambiar por el logo de la aplicacion-->
                 </span>
                 <nav class="mdl-navigation">
                     <div class="android-drawer-separator"></div>

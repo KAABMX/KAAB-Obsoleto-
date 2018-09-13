@@ -3,7 +3,9 @@
     Created on : Sep 11, 2018, 1:26:47 PM
     Author     : juan
 --%>
-
+<jsp:include page='header.jsp'>
+    <jsp:param name="title" value="Registro"/>
+</jsp:include>
 <div class="container white z-depth-2">
 	<ul class="tabs teal">
 		<li class="tab col s3"><a class="white-text active" href="#login">login</a></li>
@@ -80,3 +82,4 @@
 		</form>
 	</div>
 </div>
+<%@include file='footer.jsp'%>
