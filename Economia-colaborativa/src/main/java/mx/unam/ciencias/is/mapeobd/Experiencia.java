@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mx.unam.ciencias.is.entidad;
+package mx.unam.ciencias.is.mapeobd;
 
 import java.io.Serializable;
 import java.util.Date;

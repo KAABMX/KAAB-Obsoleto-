@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mx.unam.ciencias.is.controlador;
+package mx.unam.ciencias.is.modelo;
 
 import java.io.Serializable;
 import java.util.List;
@@ -16,8 +16,8 @@ import javax.persistence.criteria.Root;
 import javax.transaction.UserTransaction;
 import mx.unam.ciencias.is.controlador.exceptions.NonexistentEntityException;
 import mx.unam.ciencias.is.controlador.exceptions.RollbackFailureException;
-import mx.unam.ciencias.is.entidad.Curriculum;
-import mx.unam.ciencias.is.entidad.Estudio;
+import mx.unam.ciencias.is.mapeobd.Curriculum;
+import mx.unam.ciencias.is.mapeobd.Estudio;
 
 /**
  *

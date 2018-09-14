@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mx.unam.ciencias.is.controlador;
+package mx.unam.ciencias.is.modelo;
 
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;

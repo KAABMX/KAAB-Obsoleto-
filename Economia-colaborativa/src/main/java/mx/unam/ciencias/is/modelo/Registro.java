@@ -3,9 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mx.unam.ciencias.is.controlador;
+package mx.unam.ciencias.is.modelo;
 
-import mx.unam.ciencias.is.entidad.*;
+import mx.unam.ciencias.is.mapeobd.Profesor;
+import mx.unam.ciencias.is.mapeobd.Complementario;
+import mx.unam.ciencias.is.mapeobd.Experiencia;
+import mx.unam.ciencias.is.mapeobd.Alumno;
+import mx.unam.ciencias.is.mapeobd.InteresAcademico;
+import mx.unam.ciencias.is.mapeobd.Curriculum;
+import mx.unam.ciencias.is.mapeobd.Usuario;
+import mx.unam.ciencias.is.mapeobd.Estudio;
 import java.util.regex.Pattern;
 
 /**

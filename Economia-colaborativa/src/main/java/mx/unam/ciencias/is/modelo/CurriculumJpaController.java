@@ -3,15 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mx.unam.ciencias.is.controlador;
+package mx.unam.ciencias.is.modelo;
 
 import java.io.Serializable;
 import javax.persistence.Query;
 import javax.persistence.EntityNotFoundException;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
-import mx.unam.ciencias.is.entidad.Profesor;
-import mx.unam.ciencias.is.entidad.Complementario;
+import mx.unam.ciencias.is.mapeobd.Profesor;
+import mx.unam.ciencias.is.mapeobd.Complementario;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.EntityManager;
@@ -19,9 +19,9 @@ import javax.persistence.EntityManagerFactory;
 import javax.transaction.UserTransaction;
 import mx.unam.ciencias.is.controlador.exceptions.NonexistentEntityException;
 import mx.unam.ciencias.is.controlador.exceptions.RollbackFailureException;
-import mx.unam.ciencias.is.entidad.Curriculum;
-import mx.unam.ciencias.is.entidad.Estudio;
-import mx.unam.ciencias.is.entidad.Experiencia;
+import mx.unam.ciencias.is.mapeobd.Curriculum;
+import mx.unam.ciencias.is.mapeobd.Estudio;
+import mx.unam.ciencias.is.mapeobd.Experiencia;
 
 /**
  *
