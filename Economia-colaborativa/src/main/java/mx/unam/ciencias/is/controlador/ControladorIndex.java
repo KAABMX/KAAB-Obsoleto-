@@ -25,9 +25,9 @@ public class ControladorIndex {
       */
     @RequestMapping(value="/", method = RequestMethod.GET)
     public String index(){
-        return "index";
+        return "header";
     
-    }
+    }/*
     @RequestMapping(value="/peticion1", method = RequestMethod.GET)
     public void peticion1(HttpServletRequest request){
         String parametro = request.getParameter("parametro");
@@ -51,5 +51,5 @@ public class ControladorIndex {
         model.addAttribute("parametro", parametro);
         return new ModelAndView("index",model);
     
-    }
+    }*/
 }
