@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mx.unam.ciencias.is.modelo;
+package mx.unam.ciencias.is.controlador;
 
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
@@ -25,9 +25,15 @@ public class ControladorIndex {
       */
     @RequestMapping(value="/", method = RequestMethod.GET)
     public String index(){
-        return "header";
+        return "opcion";
     
-    }/*
+    }
+    @RequestMapping(value="/registrarAlumno", method = RequestMethod.GET)
+    public String alumno(){
+        return "register";
+    
+    }
+    /*
     @RequestMapping(value="/peticion1", method = RequestMethod.GET)
     public void peticion1(HttpServletRequest request){
         String parametro = request.getParameter("parametro");

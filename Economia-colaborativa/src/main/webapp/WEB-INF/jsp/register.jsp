@@ -9,68 +9,144 @@
 <!DOCTYPE html>
 <html>
     <head>
-         <link rel="stylesheet" type="text/css" href="<c:url value="/css/register.css"/>">  
+        <link rel="stylesheet" type="text/css" href="<c:url value="/css/register.css"/>"> 
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Inicio</title>
     </head>
     <body>
- <div class="materialContainer">
 
+        <!------ Include the above in your HEAD tag ---------->
 
-   <div class="box">
+        <form action="#" name="myForm" method="post" onsubmit="return(validate());">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="well center-block">
+                        <div class="well-header">
+                            <h3 class="text-center text-success"> Registro Alumno </h3>
+                            <hr>
+                        </div>
 
-      <div class="title">LOGIN</div>
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="glyphicon glyphicon-user"></i>
+                                        </div>
+                                        <input type="text" placeholder="Nombre" name="txtfname" class="form-control">
 
-      <div class="input">
-         <label for="name">Username</label>
-         <input type="text" name="name" id="name">
-         <span class="spin"></span>
-      </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-      <div class="input">
-         <label for="pass">Password</label>
-         <input type="password" name="pass" id="pass">
-         <span class="spin"></span>
-      </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="glyphicon glyphicon-user"></i>
+                                        </div>
+                                        <input type="text" placeholder="Apellido Paterno" name="txtlname" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                                                <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="glyphicon glyphicon-user"></i>
+                                        </div>
+                                        <input type="text" placeholder="Apellido Materno" name="txtlname" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-      <div class="button login">
-         <button><span>GO</span> <i class="fa fa-check"></i></button>
-      </div>
+                                                <div class="row">
+                            <div class="col-md-12 col-xs-12 col-sm-12">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="glyphicon glyphicon-envelope"></i>
+                                        </div>
+                                        <input type="email" class="form-control" name="txtmail" placeholder="E-Mail">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="row">
+                            <div class="col-md-12 col-xs-12 col-sm-12">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="glyphicon glyphicon-phone"></i>
+                                        </div>
+                                        <input type="number" minlength="10" maxlength="12" class="form-control" name="txtmobile" placeholder="Mobile No.">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-      <a href="" class="pass-forgot">Forgot your password?</a>
+                         <div class="row">
+                             <div class="col-md-12 col-xs-12 col-sm-12">
+                                 <div class="form-group">
+                                      <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="glyphicon glyphicon-user"></i>
+                                        </div>
+                            <label for="sexo">Sexo:</label>
+                            <select class="form-control" id="sexo" name="sexo">
+                                <option>Femenino</option>
+                                <option>Masculino</option>
+                            </select>
+                            </div>
+                                 </div>
+                        </div>
+                         </div>
 
-   </div>
+                        <div class="row">
+                            <div class="col-md-12 col-xs-12 col-sm-12">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="glyphicon glyphicon-list-alt"></i>
+                                        </div>
+                                        <textarea class="form-control" name="txtadd" placeholder="Address"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-   <div class="overbox">
-      <div class="material-button alt-2"><span class="shape"></span></div>
+                        <div class="row">
+                            <div class="col-md-12 col-xs-12 col-sm-12">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="glyphicon glyphicon-calendar"></i>
+                                        </div>
+                                        <input type="text" name="dob" placeholder="Date Of Birth" class="form-control" id="datepicker">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-      <div class="title">LOGIN</div>
-
-      <div class="input">
-         <label for="regname">Username</label>
-         <input type="text" name="regname" id="regname">
-         <span class="spin"></span>
-      </div>
-
-      <div class="input">
-         <label for="regpass">Password</label>
-         <input type="password" name="regpass" id="regpass">
-         <span class="spin"></span>
-      </div>
-
-      <div class="input">
-         <label for="reregpass">Repeat Password</label>
-         <input type="password" name="reregpass" id="reregpass">
-         <span class="spin"></span>
-      </div>
-
-      <div class="button">
-         <button><span>NEXT</span></button>
-      </div>
-
-
-   </div>
-
-</div>
+                        <div class="row widget">
+                            <div class="col-md-12 col-xs-12 col-sm-12">
+                                 <button id="button"  class="btn btn-primary btn-lg btn-block login-button">Registrate</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
     </body>
 </html>

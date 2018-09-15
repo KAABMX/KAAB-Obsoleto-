@@ -1,10 +1,5 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 $(function() {
+
    $(".input input").focus(function() {
 
       $(this).parent(".input").each(function() {
@@ -111,10 +106,14 @@ $(function() {
          }, 700)
 
          $(this).removeClass('material-button');
+
       }
+
       if ($(".alt-2").hasClass('material-buton')) {
          $(".alt-2").removeClass('material-buton');
          $(".alt-2").addClass('material-button');
       }
+
    });
+
 });
