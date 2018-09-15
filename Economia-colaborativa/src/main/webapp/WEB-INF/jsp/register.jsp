@@ -1,7 +1,7 @@
 <%-- 
-    Document   : register
-    Created on : 13/09/2018, 06:07:15 PM
-    Author     : hectorsama
+Document   : register
+Created on : 13/09/2018, 06:07:15 PM
+Author     : hectorsama
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -21,7 +21,7 @@
 
         <!------ Include the above in your HEAD tag ---------->
 
-        <form action="#" name="myForm" method="post" onsubmit="return(validate());">
+        <form action="${pageContext.request.contextPath}/registra" name="myForm" method="post" onsubmit="return(validate());">
             <div class="container-fluid">
                 <div class="row">
                     <div class="well center-block">
@@ -37,7 +37,7 @@
                                         <div class="input-group-addon">
                                             <i class="glyphicon glyphicon-user"></i>
                                         </div>
-                                        <input type="text" placeholder="Nombre" name="txtfname" class="form-control">
+                                        <input type="text" placeholder="Nombre" name="txtfname" class="form-control" required>
 
                                     </div>
                                 </div>
@@ -51,7 +51,7 @@
                                         <div class="input-group-addon">
                                             <i class="glyphicon glyphicon-user"></i>
                                         </div>
-                                        <input type="text" placeholder="Apellido Paterno" name="txtlname" class="form-control">
+                                        <input type="text" placeholder="Apellido Paterno" name="txtlname" class="form-control" required>
                                     </div>
                                 </div>
                             </div>
@@ -64,7 +64,7 @@
                                         <div class="input-group-addon">
                                             <i class="glyphicon glyphicon-user"></i>
                                         </div>
-                                        <input type="text" placeholder="Apellido Materno" name="txtlname" class="form-control">
+                                        <input type="text" placeholder="Apellido Materno" name="txtlname" class="form-control" required>
                                     </div>
                                 </div>
                             </div>
@@ -77,7 +77,7 @@
                                         <div class="input-group-addon">
                                             <i class="glyphicon glyphicon-envelope"></i>
                                         </div>
-                                        <input type="email" class="form-control" name="txtmail" placeholder="E-Mail">
+                                        <input type="email" class="form-control"  name="correo" id="correo"  placeholder="Email" required/>
                                     </div>
                                 </div>
                             </div>
@@ -90,7 +90,7 @@
                                         <div class="input-group-addon">
                                             <i class="glyphicon glyphicon-phone"></i>
                                         </div>
-                                        <input type="number" minlength="10" maxlength="12" class="form-control" name="txtmobile" placeholder="Mobile No.">
+                                        <input type="number" minlength="10" maxlength="12" class="form-control" name="txtmobile" placeholder="Celular">
                                     </div>
                                 </div>
                             </div>
@@ -103,8 +103,8 @@
                                         <div class="input-group-addon">
                                             <i class="glyphicon glyphicon-user"></i>
                                         </div>
-                                        <label for="sexo">Sexo:</label>
-                                        <select class="form-control" id="sexo" name="sexo">
+                                  
+                                        <select class="form-control" id="sexo" name="sexo" placeholder="Sexo">
                                             <option>Femenino</option>
                                             <option>Masculino</option>
                                         </select>
@@ -118,26 +118,39 @@
                                 <div class="form-group">
                                     <div class="input-group">
                                         <div class="input-group-addon">
-                                            <i class="glyphicon glyphicon-list-alt"></i>
+                                            <i class="glyphicon glyphicon-user"></i>
                                         </div>
-                                        <textarea class="form-control" name="txtadd" placeholder="Address"></textarea>
+                                        <label for="nivel">Nivel Academico:</label>
+                                        <select class="form-control" id="sexo" name="nivel">
+                                            <option>Primaria</option>
+                                            <option>Secundaria</option>
+                                            <option>Bachillerato</option>
+                                            <option>Universidad</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        
+                            <div class="input-group-addon">
+                                            <i class="glyphicon glyphicon-pencil"></i>
+                                              <label for="nivel">Materias de interes:</label>
+                                        </div>
+                       
+                         <div class="checkbox">
+                            <label><input type="checkbox"  name="musica">Matemáticas</label>
                         </div>
 
-                        <div class="row">
-                            <div class="col-md-12 col-xs-12 col-sm-12">
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <div class="input-group-addon">
-                                            <i class="glyphicon glyphicon-calendar"></i>
-                                        </div>
-                                        <input type="text" name="dob" placeholder="Date Of Birth" class="form-control" id="datepicker">
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" name="libros">Español</label>
                         </div>
+
+                        <div class="checkbox">
+                            <label><input type="checkbox" name="peliculas">Geografía</label>
+                        </div>
+                                              <div class="checkbox">
+                            <label><input type="checkbox" name="video">Historia</label>
+                          </div>
 
                         <div class="row widget">
                             <div class="col-md-12 col-xs-12 col-sm-12">
