@@ -25,6 +25,11 @@ public class ControladorIndex {
       */
     @RequestMapping(value="/", method = RequestMethod.GET)
     public String index(){
+        return "index";
+    
+    }
+    @RequestMapping(value="/register", method = RequestMethod.GET)
+    public String opcion(){
         return "opcion";
     
     }

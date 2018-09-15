@@ -51,7 +51,7 @@
                             <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Asesorías</a>
                             <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Asesores</a>
                             <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Información</a>
-                            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Registrarse</a><!--Quitarse al estar logueado en el sistema-->
+                            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="register">Registrarse</a><!--Quitarse al estar logueado en el sistema-->
                         </nav>
                     </div>
                     <span class="android-mobile-title mdl-layout-title">

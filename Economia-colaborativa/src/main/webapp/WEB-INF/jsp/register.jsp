@@ -56,8 +56,8 @@
                                 </div>
                             </div>
                         </div>
-                        
-                                                <div class="row">
+
+                        <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div class="form-group">
                                     <div class="input-group">
@@ -70,7 +70,7 @@
                             </div>
                         </div>
 
-                                                <div class="row">
+                        <div class="row">
                             <div class="col-md-12 col-xs-12 col-sm-12">
                                 <div class="form-group">
                                     <div class="input-group">
@@ -82,7 +82,7 @@
                                 </div>
                             </div>
                         </div>
-        
+
                         <div class="row">
                             <div class="col-md-12 col-xs-12 col-sm-12">
                                 <div class="form-group">
@@ -96,22 +96,22 @@
                             </div>
                         </div>
 
-                         <div class="row">
-                             <div class="col-md-12 col-xs-12 col-sm-12">
-                                 <div class="form-group">
-                                      <div class="input-group">
+                        <div class="row">
+                            <div class="col-md-12 col-xs-12 col-sm-12">
+                                <div class="form-group">
+                                    <div class="input-group">
                                         <div class="input-group-addon">
                                             <i class="glyphicon glyphicon-user"></i>
                                         </div>
-                            <label for="sexo">Sexo:</label>
-                            <select class="form-control" id="sexo" name="sexo">
-                                <option>Femenino</option>
-                                <option>Masculino</option>
-                            </select>
+                                        <label for="sexo">Sexo:</label>
+                                        <select class="form-control" id="sexo" name="sexo">
+                                            <option>Femenino</option>
+                                            <option>Masculino</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
-                                 </div>
                         </div>
-                         </div>
 
                         <div class="row">
                             <div class="col-md-12 col-xs-12 col-sm-12">
@@ -141,7 +141,7 @@
 
                         <div class="row widget">
                             <div class="col-md-12 col-xs-12 col-sm-12">
-                                 <button id="button"  class="btn btn-primary btn-lg btn-block login-button">Registrate</button>
+                                <button id="button"  class="btn btn-primary btn-lg btn-block login-button">Registrate</button>
                             </div>
                         </div>
                     </div>
