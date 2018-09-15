@@ -7,39 +7,48 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet"  type = "text/css" href="<c:url value="/css/opcion.css"/>"/>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <!------ Include the above in your HEAD tag ---------->
-
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> 
-
-        <title>JSP Page</title>
-    </head>
-    <body>
-
-        <section class="border-btn">
-            <div class="container">
-                <div class="row text-center">
-
-                    <div class="btn-heading">
-                        <h1>Registrarse como:</h1>
-                    </div>
-                    <form action="${pageContext.request.contextPath}/registrarAlumno" method="GET">
-                        <input type="submit" class="btn3" value="Alumno"/>
-                    </form>
-
-
-                    <form action="${pageContext.request.contextPath}/registrarProfesor" method="GET">
-                        <input type="submit" class="btn3" value="Profesor"/>
-                    </form>
-                </div> 
+<jsp:include page='header.jsp'>
+    <jsp:param name="title" value="Elige Usuario"/>
+</jsp:include>
+<div class="android-more-section">
+    <div class="android-section-title mdl-typography--display-1-color-contrast">Elige el tipo de usuario</div>
+    <div class="android-card-container mdl-grid">
+        <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+            <div class="mdl-card__media">
+                <img src="<c:url value="/imagenes/alumno.jpg"/>">
             </div>
-        </section>
-
-    </body>
-</html>
+            <div class="mdl-card__title">
+                <h4 class="mdl-card__title-text">Alumno</h4>
+            </div>
+            <div class="mdl-card__supporting-text">
+                <span class="mdl-typography--font-light mdl-typography--subhead">Registrate como alumno.</span>
+            </div>
+            <div class="mdl-card__actions">
+                <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="registrarAlumno">
+                    continua
+                    <i class="material-icons">chevron_right</i>
+                </a>
+            </div>
+        </div>
+    </div> 
+    <div class="android-card-container mdl-grid">
+        <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+            <div class="mdl-card__media">
+                <img src="<c:url value="/imagenes/profesor.jpg"/>">
+            </div>
+            <div class="mdl-card__title">
+                <h4 class="mdl-card__title-text">Profesor</h4>
+            </div>
+            <div class="mdl-card__supporting-text">
+                <span class="mdl-typography--font-light mdl-typography--subhead">Registrate como profesor.</span>
+            </div>
+            <div class="mdl-card__actions">
+                <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
+                    continua
+                    <i class="material-icons">chevron_right</i>
+                </a>
+            </div>
+        </div>
+    </div> 
+</div>
+<%@include file='footer.jsp'%>
