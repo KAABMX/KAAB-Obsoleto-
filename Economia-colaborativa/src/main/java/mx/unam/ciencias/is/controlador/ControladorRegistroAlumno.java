@@ -17,6 +17,15 @@ import mx.unam.ciencias.is.mapeobd.Usuario;
 import mx.unam.ciencias.is.mapeobd.Estudio;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.transaction.UserTransaction;
+import mx.unam.ciencias.is.modelo.AlumnoJpaController;
+import mx.unam.ciencias.is.modelo.InteresAcademicoJpaController;
+import mx.unam.ciencias.is.modelo.UsuarioJpaController;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -34,6 +43,12 @@ public class ControladorRegistroAlumno {
     @RequestMapping(value = "/registra", method = RequestMethod.POST)
     public ModelAndView peticion(HttpServletRequest request, ModelMap model) {
         try {
+            Context context = new InitialContext();
+            UserTransaction utx = (UserTransaction)context.lookup("java:comp/UserTransaction");
+            EntityManagerFactory emf = Persistence.createEntityManagerFactory("mx.unam.ciencias.is_kaab_war_1.0-SNAPSHOTPU");
+            UsuarioJpaController usuarioJpaController = new UsuarioJpaController(utx,emf);
+            AlumnoJpaController alumnoJpaController= new AlumnoJpaController(utx,emf);
+            InteresAcademicoJpaController interesJpaController= new InteresAcademicoJpaController(utx,emf);
             //crear jpaControllers para las entidades.
             Usuario usuario = new Usuario();
             usuario.setCorreo(request.getParameter("correo"));//previamente se revisa
@@ -44,7 +59,7 @@ public class ControladorRegistroAlumno {
             //InputStream foto = new FileInputStream(request.getParameter("foto"));
             //convertir la foto a bytes y agregarlo al usuario
             usuario.setSexo(request.getParameter("sexo"));
-
+            usuarioJpaController.create(usuario);
             //hasta aqui se crea el usuario
             //agregar a la ase
             /*int opt = Integer.parseInt(request.getParameter("opt"));
@@ -91,10 +106,13 @@ public class ControladorRegistroAlumno {
                 Alumno al = new Alumno();
                 al.setUltimoNivelEducativo(request.getParameter("nivel"));
                 //agregar a la base
+                alumnoJpaController.create(al);
                 InteresAcademico ia = new InteresAcademico();
                 ia.setFkIdAlumno(al);
                 ia.setInteres(request.getParameter("interes"));
                 //agregar a la base
+                interesJpaController.create(ia);
+                
         //    }
 
         } catch (Exception e) {

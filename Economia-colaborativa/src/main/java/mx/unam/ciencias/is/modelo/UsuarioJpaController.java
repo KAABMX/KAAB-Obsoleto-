@@ -26,7 +26,7 @@ import mx.unam.ciencias.is.mapeobd.Usuario;
  * @author luis
  */
 public class UsuarioJpaController implements Serializable {
-
+    
     public UsuarioJpaController(UserTransaction utx, EntityManagerFactory emf) {
         this.utx = utx;
         this.emf = emf;
