@@ -35,7 +35,12 @@ public class ControladorIndex {
     }
     @RequestMapping(value="/registrarAlumno", method = RequestMethod.GET)
     public String alumno(){
-        return "register";
+        return "registerAlumno";
+    
+    }
+        @RequestMapping(value="/registrarProfesor", method = RequestMethod.GET)
+    public String profesor(){
+        return "registerProfesor";
     
     }
     /*

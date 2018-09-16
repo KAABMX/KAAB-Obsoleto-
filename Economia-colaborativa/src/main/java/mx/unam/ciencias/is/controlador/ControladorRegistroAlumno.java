@@ -29,7 +29,7 @@ import org.springframework.web.servlet.ModelAndView;
  * @author Moctezuma19
  */
 @Controller
-public class Registro {
+public class ControladorRegistroAlumno {
 
     @RequestMapping(value = "/registra", method = RequestMethod.POST)
     public ModelAndView peticion(HttpServletRequest request, ModelMap model) {
@@ -47,7 +47,7 @@ public class Registro {
 
             //hasta aqui se crea el usuario
             //agregar a la ase
-            int opt = Integer.parseInt(request.getParameter("opt"));
+            /*int opt = Integer.parseInt(request.getParameter("opt"));
             if (opt == 0) {
                 Profesor p = new Profesor();
                 p.setCostoXHora(request.getParameter("costo"));
@@ -57,7 +57,7 @@ public class Registro {
                 String costo = reques.getParameter("foto");
                 p.set...
                  */
-                p.setHabilidades(request.getParameter("habilidades"));
+                /*p.setHabilidades(request.getParameter("habilidades"));
                 p.setNivelesEducativos(request.getParameter("niveles"));
                 //agregar a la base
                 Curriculum cv = new Curriculum();
@@ -87,7 +87,7 @@ public class Registro {
                 com.setFkIdCv(cv);
                 com.setLugar(request.getParameter("lugar"));
                 //agregar a la base
-            } else {
+            } else {*/
                 Alumno al = new Alumno();
                 al.setUltimoNivelEducativo(request.getParameter("nivel"));
                 //agregar a la base
@@ -95,7 +95,7 @@ public class Registro {
                 ia.setFkIdAlumno(al);
                 ia.setInteres(request.getParameter("interes"));
                 //agregar a la base
-            }
+        //    }
 
         } catch (Exception e) {
 

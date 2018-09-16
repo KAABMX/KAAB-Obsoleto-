@@ -21,7 +21,7 @@
 
         <!------ Include the above in your HEAD tag ---------->
 
-        <form action="${pageContext.request.contextPath}/registra" name="myForm" method="post" onsubmit="return(validate());">
+        <form action="${pageContext.request.contextPath}/registraProfesor" name="myForm" method="post" onsubmit="return(validate());">
             <div class="container-fluid">
                 <div class="row">
                     <div class="well center-block">
@@ -112,45 +112,41 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="row">
+                       <div class="row">
                             <div class="col-md-12 col-xs-12 col-sm-12">
                                 <div class="form-group">
                                     <div class="input-group">
                                         <div class="input-group-addon">
-                                            <i class="glyphicon glyphicon-user"></i>
+                                            <i class="glyphicon glyphicon-list-alt"></i>
                                         </div>
-                                        <label for="nivel">Nivel Academico:</label>
-                                        <select class="form-control" id="sexo" name="nivel">
-                                            <option>Primaria</option>
-                                            <option>Secundaria</option>
-                                            <option>Bachillerato</option>
-                                            <option>Universidad</option>
-                                        </select>
+                                        <input type="text"  class="form-control" name="habilidades" placeholder="Habilidades">
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
-                            <div class="input-group-addon">
-                                            <i class="glyphicon glyphicon-pencil"></i>
-                                              <label for="nivel">Materias de interes:</label>
+                        <div class="input-group-addon">
+                                            <i class="	glyphicon glyphicon-list-alt"></i>
+                                              <label for="nivel">Niveles Educativos</label>
                                         </div>
                        
                          <div class="checkbox">
-                            <label><input type="checkbox"  name="musica">Matemáticas</label>
+                            <label><input type="checkbox"  name="musica">Primaria</label>
                         </div>
 
                         <div class="checkbox">
-                            <label><input type="checkbox" name="libros">Español</label>
+                            <label><input type="checkbox" name="libros">Secundaria</label>
                         </div>
 
                         <div class="checkbox">
-                            <label><input type="checkbox" name="peliculas">Geografía</label>
+                            <label><input type="checkbox" name="peliculas">Bachillerato</label>
                         </div>
                                               <div class="checkbox">
-                            <label><input type="checkbox" name="video">Historia</label>
+                            <label><input type="checkbox" name="video">Universidad</label>
                           </div>
+                        
+
+              
+                                             
 
                         <div class="row widget">
                             <div class="col-md-12 col-xs-12 col-sm-12">
